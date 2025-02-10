@@ -36,9 +36,6 @@ This repository covers three major NLP tasks:
 - `vocabulary_{GroupNo}.txt` - Stores the generated vocabulary.  
 - `tokenized_{GroupNo}.json` - Output JSON file with tokenized sentences.  
 
-**Sample Output:**  
-*(Insert Tokenized Output Image Here)*  
-
 ---
 
 ## Task 2: Word2Vec Model (CBOW)  
@@ -58,11 +55,10 @@ This repository covers three major NLP tasks:
 - **Identified token triplets** based on cosine similarity.  
 
 **Loss Graph Output:**  
-![Image 7](src/task_2.png)
-*(Insert Graph Image Here)*  
+![Image 1](src/task2.png)
 
 **Token Similarity Example:**  
-*(Insert Token Similarity Output Image Here)*  
+![Image 2](src/tokenSimilarity.png)
 
 ---
 
@@ -87,10 +83,13 @@ This repository covers three major NLP tasks:
 - **Token predictions** for `test.txt`.  
 
 **Loss Curves for Models:**  
-*(Insert Loss Graphs Here)*  
+![Image 3](src/task3.png)
 
 **Accuracy and Perplexity Results:**  
-*(Insert Results Here)*  
+- **Average Training Accuracy:** 96.28%  
+- **Average Validation Accuracy:** 12.32%  
+- **Average Training Perplexity:** 1.11  
+- **Average Validation Perplexity:** 1487023.57  
 
 ---
 
