@@ -149,15 +149,12 @@ python task3.py
 
 ## Contributors  
 
-- **[Your Name]** - Implementation & Documentation  
-- **[Your Team (if applicable)]**  
+- [Vansh Yadav](https://github.com/vansh22559)
+- [Shamik Sinha](https://github.com/theshamiksinha)
+- [Shrutya Chawla](https://github.com/shrutya22487)
 
 ---
 
 ## License  
 
 This project is licensed under the **MIT License**. See `LICENSE` for details.  
-
---- 
-
-This should now have a more clean and professional feel!
