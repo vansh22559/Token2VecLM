@@ -1,23 +1,44 @@
+# NLP Tokenization & Language Modeling from Scratch 🧠  
+
+This project implements core **Natural Language Processing (NLP)** components from scratch **without relying on external NLP libraries** like NLTK or Hugging Face. It is designed to provide a deep understanding of foundational NLP techniques by building a **WordPiece Tokenizer**, a **Word2Vec (CBOW) Model**, and a **Neural Language Model (MLP-based)**.  
+
+## 📂 Repository Structure
+```
+├── 📖 README.md                           <- Project documentation and setup instructions
+├── 📜 Project_Description.pdf             <- Overview of objectives and methodology
+├── 📑 Project Report.pdf                  <- Final project report with analysis and findings
+├── 📂 Data
+│ ├── 📄 corpus.txt                        <- Raw text corpus for tokenization
+│ ├── 📄 tokenized_data.json               <- Preprocessed tokenized data
+│ ├── 📄 vocabulary_86.txt                 <- Extracted vocabulary with 86 unique tokens
+├── 📂 src
+│ ├── 📓 Neural_Language_model.ipynb       <- Notebook implementing a neural language model
+│ ├── 📜 Word2Vec_model.py                 <- Word2Vec model for word embeddings
+│ ├── 📜 WordPieceTokeniser.ipynb          <- Jupyter notebook for WordPiece tokenization
+│ ├── 📜 WordPieceTokeniser.py             <- Python script for tokenization
+│ ├── 📄 Neural_LM_loss.png                <- Training loss curve for language model
+│ ├── 📄 predicted.png                     <- Sample predictions from the model
+│ ├── 📄 task2.png                         <- Visualization for task 2
+│ ├── 📄 task3.png                         <- Visualization for task 3
+│ ├── 📄 tokenSimilarity.png               <- Token similarity heatmap
+│ ├── 📓 temp.ipynb                        <- Temporary script for testing
+```
 ---
-
-# NLP Tokenization & Language Modeling from Scratch 🧠
-
-This project implements core **Natural Language Processing (NLP)** components from scratch **without using external NLP libraries** like NLTK or Hugging Face.  
 
 ## Overview 📚  
 
 This repository covers three major NLP tasks:  
 
-- **Task 1**: Implementing a **WordPiece Tokenizer**.  
-- **Task 2**: Building a **Word2Vec (CBOW) Model** using PyTorch.  
-- **Task 3**: Training a **Neural Language Model (MLP-based)** with three architectural variations.  
+1. **Task 1**: Implementing a **WordPiece Tokenizer**.  
+2. **Task 2**: Building a **Word2Vec (CBOW) Model** using PyTorch.  
+3. **Task 3**: Training a **Neural Language Model (MLP-based)** with three architectural variations.  
 
 ---
 
 ## Features ✨  
 
 - **Fully custom implementation** of a WordPiece Tokenizer.  
-- **Word2Vec (CBOW) model** using PyTorch.  
+- **Word2Vec (CBOW) model** built using PyTorch.  
 - **Neural Language Model** trained for next-word prediction.  
 - **PyTorch-based training pipeline** with loss visualization.  
 - **Evaluation metrics** including cosine similarity, accuracy, and perplexity.  
@@ -28,15 +49,15 @@ This repository covers three major NLP tasks:
 
 ### Implementation Details  
 
-- **Preprocessing**: Cleans and processes raw text data.  
-- **Vocabulary Construction**: Extracts subword tokens and saves them in `vocabulary_{GroupNo}.txt`.  
-- **Tokenization**: Converts sentences into subword tokens.  
+- **Preprocessing**: Cleans and processes raw text data (lowercasing, removing special characters, etc.).  
+- **Vocabulary Construction**: Extracts subword tokens and saves them in `vocabulary_86.txt`.  
+- **Tokenization**: Converts sentences into subword tokens using the generated vocabulary.  
 
 ### Deliverables  
 
 - `task1.py` - Contains the **WordPieceTokenizer** class.  
-- `vocabulary_{GroupNo}.txt` - Stores the generated vocabulary.  
-- `tokenized_{GroupNo}.json` - Output JSON file with tokenized sentences.  
+- `vocabulary_86.txt` - Stores the generated vocabulary.  
+- `tokenized_86.json` - Output JSON file with tokenized sentences.  
 
 ---
 
@@ -44,10 +65,10 @@ This repository covers three major NLP tasks:
 
 ### Implementation Details  
 
-- **Dataset Preparation**: Implements `Word2VecDataset` to create training data.  
+- **Dataset Preparation**: Implements `Word2VecDataset` to create training data for the CBOW model.  
 - **Word2Vec Model**: Implements a CBOW-based neural network using PyTorch.  
-- **Training Function**: Manages the training pipeline.  
-- **Similarity Calculation**: Computes cosine similarity for token triplets.  
+- **Training Function**: Manages the training pipeline, including loss computation and optimization.  
+- **Similarity Calculation**: Computes cosine similarity for token triplets to evaluate word relationships.  
 
 ### Deliverables  
 
@@ -57,10 +78,10 @@ This repository covers three major NLP tasks:
 - **Identified token triplets** based on cosine similarity.  
 
 **Loss Graph Output:**  
-![Image 1](src/task2.png)
+![Task 2 Loss Curve](src/task2.png)  
 
 **Token Similarity Example:**  
-![Image 2](src/tokenSimilarity.png)
+![Token Similarity](src/tokenSimilarity.png)  
 
 ---
 
@@ -68,13 +89,13 @@ This repository covers three major NLP tasks:
 
 ### Implementation Details  
 
-- **Dataset Preparation**: Implements `NeuralLMDataset` for next-word prediction.  
+- **Dataset Preparation**: Implements `NeuralLMDataset` for next-word prediction tasks.  
 - **Three Neural Network Variations**:  
-  - **NeuralLM1**: Baseline model.  
-  - **NeuralLM2**: Modified activation functions and layers.  
-  - **NeuralLM3**: Increased input token size.  
+  - **NeuralLM1**: Baseline model with basic architecture.  
+  - **NeuralLM2**: Modified activation functions and additional layers.  
+  - **NeuralLM3**: Increased input token size for better context understanding.  
 - **Training Function**: Handles training across all models.  
-- **Evaluation Metrics**: Computes **accuracy and perplexity**.  
+- **Evaluation Metrics**: Computes **accuracy and perplexity** for model evaluation.  
 - **Next Token Prediction**: Predicts the next three tokens for test sentences.  
 
 ### Deliverables  
@@ -84,14 +105,12 @@ This repository covers three major NLP tasks:
 - **Accuracy and perplexity scores**.  
 - **Token predictions** for `test.txt`.  
 
-**Loss Curves for Models:**  
-![Image 3](src/task3.png)
 
 **Accuracy and Perplexity Results:**  
 - **Average Training Accuracy:** 96.28%  
 - **Average Validation Accuracy:** 12.32%  
 - **Average Training Perplexity:** 1.11  
-- **Average Validation Perplexity:** 1487023.57  
+- **Average Validation Perplexity:** 1,487,023.57  
 
 ---
 
