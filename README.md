@@ -58,6 +58,7 @@ This repository covers three major NLP tasks:
 - **Identified token triplets** based on cosine similarity.  
 
 **Loss Graph Output:**  
+![Image 7](src/task_2.png)
 *(Insert Graph Image Here)*  
 
 **Token Similarity Example:**  
