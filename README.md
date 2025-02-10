@@ -1,8 +1,10 @@
-# NLP Tokenization & Language Modeling from Scratch
+---
+
+# NLP Tokenization & Language Modeling from Scratch 🧠
 
 This project implements core **Natural Language Processing (NLP)** components from scratch **without using external NLP libraries** like NLTK or Hugging Face.  
 
-## Overview  
+## Overview 📚  
 
 This repository covers three major NLP tasks:  
 
@@ -12,7 +14,7 @@ This repository covers three major NLP tasks:
 
 ---
 
-## Features  
+## Features ✨  
 
 - **Fully custom implementation** of a WordPiece Tokenizer.  
 - **Word2Vec (CBOW) model** using PyTorch.  
@@ -22,7 +24,7 @@ This repository covers three major NLP tasks:
 
 ---
 
-## Task 1: WordPiece Tokenizer  
+## Task 1: WordPiece Tokenizer 📝  
 
 ### Implementation Details  
 
@@ -38,7 +40,7 @@ This repository covers three major NLP tasks:
 
 ---
 
-## Task 2: Word2Vec Model (CBOW)  
+## Task 2: Word2Vec Model (CBOW) 🧑‍💻  
 
 ### Implementation Details  
 
@@ -62,7 +64,7 @@ This repository covers three major NLP tasks:
 
 ---
 
-## Task 3: Neural Language Model (MLP)  
+## Task 3: Neural Language Model (MLP) 🧑‍🔬  
 
 ### Implementation Details  
 
@@ -93,7 +95,7 @@ This repository covers three major NLP tasks:
 
 ---
 
-## Setup and Execution  
+## Setup and Execution 🚀  
 
 ### Prerequisites  
 
@@ -104,10 +106,10 @@ Ensure you have the following installed:
 - **NumPy**  
 - **Pandas**  
 
-#### Installation
+#### Installation  
 ```bash
 pip install torch numpy pandas
-``` 
+```  
 
 ### Running the Scripts  
 
@@ -130,7 +132,7 @@ python task3.py
 
 ---
 
-## Results and Observations  
+## Results and Observations 🔍  
 
 - The **WordPiece Tokenizer** effectively segments words into subwords.  
 - The **CBOW Word2Vec model** captures meaningful word relationships.  
@@ -139,7 +141,7 @@ python task3.py
 
 ---
 
-## Future Improvements  
+## Future Improvements 🔧  
 
 - **Implement positional encoding** for better embeddings.  
 - **Experiment with Transformer-based models** for improved performance.  
@@ -147,7 +149,7 @@ python task3.py
 
 ---
 
-## Contributors  
+## Contributors 🙌  
 
 - [Vansh Yadav](https://github.com/vansh22559)
 - [Shamik Sinha](https://github.com/theshamiksinha)
@@ -155,6 +157,6 @@ python task3.py
 
 ---
 
-## License  
+## License 📄  
 
 This project is licensed under the **MIT License**. See `LICENSE` for details.  
